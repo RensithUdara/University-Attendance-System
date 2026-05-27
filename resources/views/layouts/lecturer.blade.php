@@ -10,6 +10,17 @@
     <link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
 </head>
 <body class="dashboard-body">
+    <div class="page-loader" id="pageLoader" aria-live="polite" aria-label="Loading page">
+        <div class="page-loader-card">
+            <div class="page-loader-mark">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="page-loader-ring"></div>
+            <div class="page-loader-text">Loading EduManage</div>
+            <div class="page-loader-bar"><span></span></div>
+        </div>
+    </div>
+
     <!-- Lecturer Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top dashboard-navbar lecturer-navbar">
         <div class="container-fluid">
@@ -156,7 +167,6 @@
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="{{ asset('js/auth.js') }}"></script>
     <script src="{{ asset('js/dashboard.js') }}"></script>
 </body>
 </html>
