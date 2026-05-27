@@ -8,7 +8,7 @@
     <div class="welcome-section animate-fade-in">
         <div class="row align-items-center">
             <div class="col">
-                <h2 class="welcome-title">Create New Lecture 📝</h2>
+                <h2 class="welcome-title">Create New Lecture</h2>
                 <p class="welcome-subtitle">Schedule a new lecture session for your course</p>
             </div>
             <div class="col-auto">
@@ -68,11 +68,14 @@
                                             id="course_id" name="course_id" required>
                                         <option value="">Select Course</option>
                                         @foreach($courses as $course)
-                                            <option value="{{ $course->id }}" {{ old('course_id') == $course->id ? 'selected' : '' }}>
+                                            <option value="{{ $course->id }}" {{ old('course_id', request('course_id')) == $course->id ? 'selected' : '' }}>
                                                 {{ $course->name }} ({{ $course->code }})
                                             </option>
                                         @endforeach
                                     </select>
+                                    @if($courses->isEmpty())
+                                        <div class="form-text text-danger">No courses are assigned to your lecturer account yet. Ask an admin to create or assign a course first.</div>
+                                    @endif
                                     @error('course_id')
                                         <div class="invalid-feedback">{{ $message }}</div>
                                     @enderror
