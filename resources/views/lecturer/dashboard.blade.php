@@ -8,7 +8,7 @@
     <div class="welcome-section animate-fade-in">
         <div class="row align-items-center">
             <div class="col">
-                <h2 class="welcome-title">Welcome back, {{ Auth::user()->name }}! 👋</h2>
+                <h2 class="welcome-title">Welcome back, {{ Auth::user()->name }}!</h2>
                 <p class="welcome-subtitle">Here's what's happening with your courses today.</p>
             </div>
             <div class="col-auto">
