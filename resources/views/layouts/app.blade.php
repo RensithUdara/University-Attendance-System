@@ -9,6 +9,17 @@
     <link href="{{ asset('css/auth.css') }}" rel="stylesheet">
 </head>
 <body class="auth-body">
+    <div class="page-loader" id="pageLoader" aria-live="polite" aria-label="Loading page">
+        <div class="page-loader-card">
+            <div class="page-loader-mark">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="page-loader-ring"></div>
+            <div class="page-loader-text">Loading EduManage</div>
+            <div class="page-loader-bar"><span></span></div>
+        </div>
+    </div>
+
     <!-- Layout for guest users (login/register pages) -->
     <div class="auth-container">
         <!-- Background elements -->
